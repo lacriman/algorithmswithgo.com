@@ -10,5 +10,17 @@ package module01
 //   DecToBase(14, 2) => "1110"
 //
 func DecToBase(dec, base int) string {
-	return ""
+	newNumber := []rune{}
+	if dec == 0 {
+		return "0"
+	}
+
+	const digits = "0123456789ABCDEFG"
+
+	for dec > 0 {
+		rem := dec % base
+		newNumber = append(newNumber, rune(digits[rem]))
+		dec = dec / base
+	}
+	return Reverse(string(newNumber))
 }
