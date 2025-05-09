@@ -413,6 +413,12 @@ Examples:
 Factor([]int{2,3,5,7}, 30) // []int{2,3,5}
 Factor([]int{2,3,5,7}, 28) // []int{2,2,7}
 Factor([]int{2,3,5,7}, 720) // []int{2,2,2,3,3,5}
+
+1. try to divide number with 1 prime,
+2. if remainder != 0 => add number to slice => continue
+3. else go to next number and repeat (for loop)
+
+
 ```
 
 Examples with remainders:
