@@ -344,6 +344,11 @@ Ex:
 ```go
 BaseToBase("E", 16, 2) // "1110"
 BaseToBase("8831A383B", 12, 16) // "DEADBEEF"
+
+convert "E" with base 16 to a decimal
+convert decimal to a base of
+
+
 ```
 
 ## 12 - Find two that sum [code]
