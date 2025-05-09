@@ -368,6 +368,14 @@ Ex:
 FindTwoThatSum([]int{1, 2, 3, 4}, 7) // (2, 3)
 FindTwoThatSum([]int{0, -1, 1}, 0) // (1, 2)
 FindTwoThatSum([]int{0, 1, 1}, 0) // (-1, -1)
+
+1. iterate slice to find numbers, so num1 + num2 is sum
+
+2. return indices of these numbers
+   if num1 + num2 != sum => return (-1, -1)
+
+3.
+
 ```
 
 Or if we have duplicate answers any of them are okay. All of the following are correct.

@@ -35,5 +35,24 @@ package module01
 //    for the sum of 4.
 //
 func FindTwoThatSum(numbers []int, sum int) (int, int) {
-	return 0, 0
+	bestI, bestJ := -1, -1
+	minDiff := -1
+
+	for i := 0; i < len(numbers); i++ {
+		for j := i + 1; j < len(numbers); j++ {
+			if numbers[i]+numbers[j] == sum {
+				diff := numbers[i] - numbers[j]
+				if diff < 0 {
+					diff = -diff
+				}
+				if bestI == -1 || diff < minDiff || i < bestI || (i == bestI && j < bestJ) {
+					bestI, bestJ = i, j
+					minDiff = diff
+				}
+			}
+
+		}
+	}
+
+	return bestI, bestJ
 }
